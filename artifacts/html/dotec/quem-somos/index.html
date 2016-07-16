@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br"> 
+	<head> 
+		<title>DOTEC  -  Soluções em gestão da informação, arquivamento, organização, segurança, sigilo e administração de arquivos</title> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<meta name="ROBOTS" content="ALL" /> 
+		<meta name="desciption" content="" lang="pt-br" /> 
+		<meta name="keywords" content="" lang="pt-br" /> 
+		<meta name="Copyright" content="" /> 
+		<meta content="Global" name="distribution"/> 
+		<meta content="7 days" name="Revisit"/> 
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/> 		
+		<link rel="stylesheet"    type="text/css"     href="../client/css/general.css" media="screen" /> 
+		<link rel="stylesheet"    type="text/css"     href="../client/css/jquery-ui-1.8.7.custom.css"/>
+		<script type="text/javascript" src="../client/js/jquery.js"></script>
+		<script type="text/javascript" src="../client/js/cmxforms.js"></script>
+		<script type="text/javascript" src="../client/js/jquery.loading.js"></script>    
+		<script type="text/javascript" src="../client/js/jquery.maskedinput.js"></script>    
+		<script type="text/javascript" src="../client/js/jquery.validate.js"></script>  
+		<script type="text/javascript" src="../client/js/jquery.tablesorter.js"></script>  
+		<script type="text/javascript" src="../client/js/jquery.tablesorter.pager.js"></script>
+		<script type="text/javascript" src="../client/js/jquery.fixedposition.js"></script>
+		<script type="text/javascript" src="../client/js/jquery-ui-1.8.custom.min.js"></script>
+		<script type="text/javascript" src="../client/js/jquery.jstree.js" ></script>
+		<script type="text/javascript" src="../client/js/jquery.hotkeys.js" ></script>
+		<script type="text/javascript" src="../client/js/swfobject.js"></script> 		
+		<script type="text/javascript" src="../client/js/dotec.js"></script> 	
+
+		<script type="text/javascript">
+			swfobject.embedSWF("../client/swf/animacao_dotec.swf", "webdoor", "727", "189", "9.0.0", "../client/swf/animacao_dotec.swf");
+		</script>		
+	</head> 
+	<body> 
+		<div id="main">
+			<!--TOPO-->        
+			<div id="loadingPanel">
+				<span>Carregando</span><br /><br /><br />
+				<span class="txtStatus">Suas informações estão sendo processadas</span>		
+			</div>
+
+			<div id="top">
+				<!-- START MENU -->
+				<div id="menu">
+					<ul>
+						<li class="mHome"><a href="../?"><strong>Home</strong></a></li>    
+						<li class="mQuemSomos"><a href="?"><strong>Quem Somos</strong></a></li>
+						<li class="mTabela"><a href="../tabela-de-precos/"><strong>Tabela de preços</strong></a></li>
+						<li class="mArea"><a href="../area-de-atuacao/"><strong>Área de atuação</strong></a></li>
+						<li class="mDicas"><a href="../dicas/"><strong>Dicas</strong></a></li> 						
+						<li class="mContato"><a href="../contato/"><strong>Contato</strong></a></li> 
+					</ul>	
+				</div>
+				<!-- END MENU -->
+				
+				<!-- START LOGO -->
+				<div id="logo">         
+					<h1><a href="#"><strong>DOTEC - Segurança da Informação</strong></a></h1>                       
+					<!-- START BOX USUARIO -->
+					<div class="boxUsuario">                                    						
+						<form method="post" action="?" onsubmit="return validarUsuario();" name="frmLogin">
+							<!-- START LOGIN -->
+							<div class="login">
+								<div class="lineField">
+									<div>
+										<label>E-mail:</label>
+										<input type="text" id="txtLoginEmail" name="txtLoginEmail" />
+									</div>
+									<div>
+										<label>Senha:</label>
+										<input type="password" id="txtLoginPass" name="txtLoginPass" />
+									</div>
+								</div>
+								<!-- END LOGIN -->
+
+								<div class="clear"></div>
+								<!-- START LINEFIELD -->
+								<div class="lineField">
+									<a href="cadastro.asp" class="lnkCad">Crie sua conta</a>
+									<a href="javascript:void();" id="forgot-login">Esqueceu a senha?</a>
+									<input type="image" src="../client/image/btAcessar.png"  style="float:right;background:none;border:0px;" />
+								</div>
+								<!-- END LINEFIELD -->
+							</div>
+						</form>
+					
+						<!-- START FORGOT LOGIN -->
+						<div class="esqueceu" style="display:none">
+							<div class="lineField">
+								<div>
+									<label>E-mail:</label>
+									<input type="text" id="txtEsqueceuSenhaEmail" name="txtEsqueceuSenhaEmail" style="width:270px;" />
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div class="lineField">
+								<a href="javascript:void();" id="back-login"><< Voltar</a>
+								<img src="../client/image/btEnviar.png" onclick="getNewPass();" />
+							</div>
+						</div>
+						<!-- END FORGOT LOGIN -->                                         
+					</div>
+					<!-- END BOX USUARIO -->                                         
+				</div>
+      
+				<div id="webdoor">         
+					<a href="../image/animacao_dotec.swf"></a>
+				</div>
+			</div>
+			<!-- END TOP -->
+
+			<div class="clear"></div>
+    
+			<div id="msgSystem" class="sucess"></div>
+
+			<!-- START CONTENT -->
+			<div id="content">
+				<!-- START MASTER PANEL -->
+				<div id="masterPanel">
+					<!-- START LEFT MASTER -->
+					<div class="leftMaster">					             
+						<div id="boxLateral" class="boxServicos">
+							<div class="bTop"></div>    
+							<div class="bCont">
+								<div class="bDeg">
+									<h2>Serviços</h2>
+									<ul>
+										<li><a href="guarda-simples.asp">Guarda Simples</a></li>
+										<li><a href="guarda-gerenciada.asp">Guarda Gerenciada</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="bBottom"></div> 
+						</div>                            
+					</div>
+					<!-- END LEFT MASTER -->
+					<!-- START RIGHT MASTER -->
+					<div class="rightMaster">
+																						
+						<!-- START CONTEUDO PRINCIPAL -->
+						<div class="conteudo">
+							<h2>Quem Somos</h2>                  
+							<div class="topBoxConteudo"></div>
+							<div class="BoxConteudo">
+								<p>Se você é um profissional liberal – médico, contador, advogado, administrador e tantos outros - ou uma Empresa de médio e pequeno porte, com certeza já teve problemas com espaço físico para organizar tantos documentos exigidos por lei que precisam ser guardados por um longo tempo.</p>
+								<p>Além disso, pastas fora do lugar ou documentos que se perdem são problemas comuns e podem trazer resultados desastrosos e indesejáveis. E ainda, funcionários que passam a maior parte do dia tentando organizar os documentos ou encontrá-los, apresentam uma perda de, aproximadamente, 40% do tempo de serviço.  </p>
+								<p>Com a DOTEC, você pode transformar o espaço ocupado com os documentos, de obrigatoriedade legal e fiscal, em um espaço para sua atividade fim, ou seja, transformar uma área improdutiva que gera somente custos e incômodos, em uma área útil e produtiva. Ao liberar o espaço, você está investindo no melhor aproveitamento das salas e, principalmente, liberando sua força de trabalho para atividades mais focadas. </p>
+								<p>Além dos problemas de espaço físico e melhorias no ambiente de trabalho, você pode diminuir os custos operacionais necessários para cuidar dos arquivos ativos, intermediários e inativos. /p>
+								<p>A DOTEC cuida de todo o processo para que você economize no custo do espaço-físico, na adequação deste espaço para preservação dos documentos, na manutenção dos arquivos, nos gastos com luz, limpeza e funcionários para seu manuseio, no tempo para a localização de algum documento, entre outros itens que geram despesas para gerenciar um arquivo.</p>
+								<p>E mais, a DOTEC disponibiliza profissionais especializados, atualizados e treinados para solucionar e gerenciar arquivos com segurança e sigilo, garantindo a qualidade dos serviços prestados aos seus clientes.</p><p>Terceirizar esse tipo de serviço é a tendência do mercado atual para grandes, médias, pequenas, microempresas e profissionais liberais que queiram melhorar a logística na gestão de seus documentos, facilitando a rapidez no acesso às informações e a integração entre os setores. Em média, a terceirização representa o custo de somente 20% do valor total que você gastaria para manter a guarda dos documentos em suas dependências.</p>
+								<p>Somos uma Empresa preocupada com o controle, a agilidade, a segurança e a redução de custos para os nossos clientes. </p>
+								<div class="clear"></div>
+							</div>
+							<div class="bottomBoxConteudo"></div>                    
+						</div>
+						<!-- END CONTEUDO PRINCIPAL -->														
+					</div>
+					<!-- END RIGHT MASTER -->
+					<div class="clear"></div>
+				</div>   
+				<!-- end MASTER PANEL -->
+				<div class="bottomMaster"></div>
+			</div>
+			<!-- END CONTENT -->
+   
+			<!-- START FOOTER -->
+			<div id="footer">
+				<a href="#">Busca Avançada</a>     |    <a href="cadastro.asp">Criar uma conta</a>
+				<span><strong>Dotec</strong> © 2010 - Todos os direitos reservados</span>
+			</div>   
+			<!-- END FOOTER -->
+		</div>
+	</body>
+</html>

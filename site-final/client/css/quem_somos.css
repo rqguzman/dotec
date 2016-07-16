@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+
+.formulario {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+}
+#cadastro-tabela {
+	position:absolute;
+	left:25px;
+	top:20px;
+	width:295px;
+	height:84px;
+	z-index:115;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+
+
+
+#topo {
+	position: absolute;
+	width: 980px;
+	height: 132px;
+	z-index: 1;
+	background-image: url(../imagens/topo.jpg);
+	layer-background-image: url(../imagens/topo.jpg);
+	border: 1px none #000000;
+}
+#menu {
+	position: absolute;
+	top: 132px;
+	width: 980px;
+	height: 37px;
+	z-index: 2;
+	background-image: url(../imagens/menu.jpg);
+	layer-background-image: url(../imagens/menu.jpg);
+	border: 1px none #000000;
+}
+#slide {
+	position: absolute;
+	top: 169px;
+	width: 980px;
+	height: 266px;
+	z-index: 3;
+	background-image: url(../imagens/slide.jpg);
+	layer-background-image: url(../imagens/slide.jpg);
+	border: 1px none #000000;
+}
+#principal #topo #campo-login #cadastro-tabela #form1 table tr td .formulario a {
+	color: #333;
+}
+#principal #topo #campo-login #cadastro-tabela #form1 table tr td .formulario a:hover {
+	text-decoration: underline;
+}
+
+#conteudo {
+	position: absolute;
+	top: 175px;
+	width: 980px;
+	height: 462px;
+	z-index: 4;
+	background-image: url(../imagens/conteudo2.jpg);
+	layer-background-image: url(../imagens/conteudo.jpg);
+	border: 1px none #000000;
+}
+#rodape {
+	position: absolute;
+	top: 637px;
+	width: 980px;
+	height: 382px;
+	z-index: 5;
+	background-color: #000000;
+	layer-background-color: #000000;
+	border: 1px none #000000;
+}
+#principal {
+	position:absolute;
+	margin-left:-490px;
+	left:50%;
+	top:0px;
+}
+body, td, th {
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(../img/bg.jpg);
+	background-repeat: repeat-x;
+	scrollbar-face-color:#535353;
+	scrollbar-highlight-color: #3A3A3A;
+	scrollbar-shadow-color: #000;
+	scrollbar-3dlight-color: #000;
+	scrollbar-arrow-color: #000;
+	scrollbar-track-color: #232323;
+	scrollbar-darkshadow-color: #3A3A3A;
+}
+body {
+	background-color: #000;
+	background-image: url(../imagens/bg.jpg);
+	background-repeat: repeat-x;
+}
+#logotipo {
+	position:absolute;
+	left:20px;
+	top:7px;
+	width:166px;
+	height:117px;
+	z-index:10;
+}
+#cadastre-se {
+	position:absolute;
+	left:311px;
+	top:35px;
+	width:202px;
+	height:69px;
+	z-index:10;
+}
+#campo-login {
+	position:absolute;
+	left:635px;
+	top:7px;
+	width:337px;
+	height:123px;
+	z-index:2;
+}
+#links-menu-horizontal {
+	position:absolute;
+	left:0px;
+	top:-6px;
+	width:980px;
+	height:55px;
+	z-index:20;
+	text-align: center;
+	font-size: 15px;
+}
+#principal #conteudo #menu-horizontal2 ul {
+	list-style-type: none;
+}
+#principal #conteudo #menu-horizontal2 ul li {
+	display: inline;
+	padding-right: 30px;
+}
+#principal #conteudo #menu-horizontal2 ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #FFF;
+	text-decoration: none;
+}
+#principal #menu #links-menu-horizontal ul {
+	list-style-type: none;
+}
+#principal #menu #links-menu-horizontal ul li {
+	display: inline;
+	padding-right: 30px;
+}
+#principal #menu #links-menu-horizontal ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	text-decoration: none;
+}
+#principal #menu #links-menu-horizontal ul li a:hover {
+	text-decoration: underline overline;
+}
+#menu-horizontal2 {
+	position:absolute;
+	left:199px;
+	top:24px;
+	width:593px;
+	height:64px;
+	z-index:10;
+	text-align: left;
+}
+#principal #conteudo #menu-horizontal2 ul li a:hover {
+	text-decoration: underline;
+}
+#menu-conheca-melhor {
+	position:absolute;
+	left:16px;
+	top:74px;
+	width:317px;
+	height:231px;
+	z-index:10;
+	visibility: visible;
+}
+#principal #conteudo #menu-conheca-melhor ul {
+	list-style-type: square;
+}
+#principal #conteudo #menu-conheca-melhor ul li {
+	padding-top: 10px;
+}
+#principal #conteudo #menu-conheca-melhor ul li a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+#principal #conteudo #menu-conheca-melhor ul li a:hover {
+	color: #909090;
+}
+#texto-apresentacao {
+	position:absolute;
+	left:230px;
+	top:53px;
+	width:706px;
+	height:390px;
+	z-index:20;
+	overflow:auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: justify;
+	padding: 10px;
+	visibility: visible;
+}
+
+
+#texto-pra-voce {
+	position:absolute;
+	left:230px;
+	top:53px;
+	width:706px;
+	height:390px;
+	z-index:20;
+	overflow:auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: justify;
+	padding: 10px;
+	visibility: visible;
+}
+#texto-para-a-sua-empresa {
+	position:absolute;
+	left:230px;
+	top:53px;
+	width:706px;
+	height:390px;
+	z-index:20;
+	overflow:auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: justify;
+	padding: 10px;
+	visibility: visible;
+}
+#grandes-acervos {
+	position:absolute;
+	left:32px;
+	top:280px;
+	width:191px;
+	height:93px;
+	z-index:15;
+	text-align: center;
+	visibility: visible;
+}
+#principal #conteudo #grandes-acervos p a {
+	color: #CCC;
+	text-decoration: none;
+}
+#principal #conteudo #grandes-acervos p a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+#youtube {
+	position:absolute;
+	left:28px;
+	top:32px;
+	width:502px;
+	height:352px;
+	z-index:15;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+#facebook {
+	position:absolute;
+	left:570px;
+	top:727px;
+	width:376px;
+	height:174px;
+	z-index:15;
+}
+#acompanhe {
+	position:absolute;
+	left:567px;
+	top:668px;
+	width:359px;
+	height:53px;
+	z-index:15;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+#icones-redes-sociais {
+	position:absolute;
+	left:570px;
+	top:856px;
+	width:377px;
+	height:92px;
+	z-index:20;
+	text-align: center;
+}
+#rodape-final {
+	position:absolute;
+	left:0px;
+	top:989px;
+	width:980px;
+	height:65px;
+	z-index:25;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+}
+#texto-conteudo {
+	position:absolute;
+	left:55px;
+	top:19px;
+	width:872px;
+	height:423px;
+	z-index:10;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: justify;
+}

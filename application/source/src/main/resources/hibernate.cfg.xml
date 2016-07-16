@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		
+		<!-- DEMO
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/doteccom_demo</property>		
+		<property name="hibernate.connection.username">doteccom_homolog</property>
+		<property name="hibernate.connection.password">oNfil$303</property>
+		-->
+		<!-- QUALIDADE
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/doteccom_homolog</property>		
+		<property name="hibernate.connection.username">doteccom_homolog</property>
+		<property name="hibernate.connection.password">oNfil$303</property>
+		
+		 -->
+		
+		<!-- Desenvolvimento -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/dotec</property>		
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		
+		
+		<!-- PRODUÇÃO 
+		
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/doteccom_prod</property>		
+		<property name="hibernate.connection.username">doteccom_prod</property>
+		<property name="hibernate.connection.password">oNfil$303</property>
+		--> 
+		
+					
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		 
+	
+		
+		<!-- Enable Hibernate's automatic session context management -->
+	    <property name="current_session_context_class">thread</property>
+
+    	<!-- Enable the second-level cache 
+   		<property name="cache.use_query_cache" >true</property>
+    	<property name="cache.use_second_level_cache">true</property>
+    	<property name="cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>
+    	<property name="net.sf.ehcache.configurationResourceName">ehcache.xml</property>
+		
+		 		
+    	<property name="cache.region_prefix">Dotec</property-->
+    	<property name="generate_statistics">true</property>
+    	 <!-- JDBC connection pool (use the built-in) -->
+    	<property name="connection.pool_size">1</property>
+    	
+    	
+		
+		 <!-- Transaction isolation 2 = READ_COMMITTED -->
+        <property name="connection.isolation">2</property>
+        <property name="connection.autocommit">true</property>
+        
+        <!-- configuration pool via c3p0-->
+      	<property name="c3p0.acquire_increment">1</property> 
+		<property name="c3p0.idle_test_period">100</property> <!-- seconds --> 
+		<property name="c3p0.max_size">100</property> 
+		<property name="c3p0.max_statements">0</property> 
+		<property name="c3p0.min_size">1</property> 
+		<property name="c3p0.timeout">100</property> 
+		
+		        
+        <mapping class="br.com.dotec.model.TabelaPreco" />
+        <mapping class="br.com.dotec.model.GerenciadorMensagem" />
+		<mapping class="br.com.dotec.model.Pessoa" />
+		<mapping class="br.com.dotec.model.PessoaFisica" />
+		<mapping class="br.com.dotec.model.Usuario" />		
+		<mapping class="br.com.dotec.model.Endereco" />
+		<mapping class="br.com.dotec.model.Cliente" />
+		<mapping class="br.com.dotec.model.ClientePessoaFisica" />
+		<mapping class="br.com.dotec.model.ClientePessoaJuridica" />
+		<mapping class="br.com.dotec.model.Telefone" />
+		<mapping class="br.com.dotec.model.Content" />
+		<mapping class="br.com.dotec.model.Faleconosco" />
+		<mapping class="br.com.dotec.model.Elemento" />
+		<mapping class="br.com.dotec.model.Caixa" />
+		<mapping class="br.com.dotec.model.File" />
+		<mapping class="br.com.dotec.model.Documento" />
+		<mapping class="br.com.dotec.model.Pasta" />
+		<mapping class="br.com.dotec.model.Envelope" />
+		<mapping class="br.com.dotec.model.Movimentacao" />
+		<mapping class="br.com.dotec.model.Boleto" />
+		<mapping class="br.com.dotec.model.BoletoItem" />
+		<mapping class="br.com.dotec.model.ErrorSystemDotec" />
+		<mapping class="br.com.dotec.model.Cep" />
+		<mapping class="br.com.dotec.model.Entrega" />
+		
+		
+	</session-factory>
+</hibernate-configuration>
+	

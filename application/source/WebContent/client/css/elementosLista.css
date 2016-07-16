@@ -1,0 +1,10 @@
+.ui-dialog-titlebar{	font-size: 10px;	}.ui-button-text{	font-size: 10px;}
+
+.demo{	
+	width:290px !important;
+	height:450px;
+	overflow: scroll;
+	float:left
+}
+
+.jstree-icon {height:18px !important;width:23px !important}#vakata-contextmenu ul {min-width: 200px;}#submenu li{	margin-left: 5px;}.btnRefresh:HOVER{	cursor: pointer;}#dialog-form-adiciona{	overflow: visible;}.progress { display:inline-block; width:95%; border: 1px solid #ddd; padding: 1px; border-radius: 3px; }.bar { background-color: #B4F5B4; width:0%; height:20px; border-radius: 3px; }.percent { display:inline-block;margin-left: auto;margin-right: auto;}

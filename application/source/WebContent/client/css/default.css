@@ -1,0 +1,76 @@
+#datapf *, #datapj * {
+	color:#666;}
+#datapf p,#datapj p {
+	
+	text-align:left
+	
+	}
+#errors{
+	color: red;
+}
+/* Css for autocomplete */
+.ui-button { margin-left: -1px; }
+.ui-button-icon-only .ui-button-text { padding: 0.35em; } 
+.ui-autocomplete-input { margin: 0; padding: 0.48em 0 0.47em 0.45em; width: 500px}
+#dialog-form-adiciona *{font-size:12px !important}
+.boletosGerados{padding:0 10px !important;background:#FFFFCC}
+.boletosGerados ul{	margin:0px;padding:0px;}
+.boletosGerados ul li{display:inline}
+ td.aberto{
+	background:#FFA8A8 !important;
+}
+#boxDocumentos{width:610px !important;float:left;padding:0 0 0 10px}
+#boxDocumentos table{width:100%}.tab th{	text-align: left}
+
+
+.textonovo{
+	width:300px !important
+}
+
+.formularioDeBusca fieldset{
+	border-style: none;
+}
+
+.readOnly{
+	background-color:#F2F2F2;
+}
+
+.div-dialog-form { font-size: 8pt; }
+
+.div-dialog-form label, input { display:block; }
+
+.div-dialog-form input.text { margin-bottom:12px; width:95%; padding: .4em; }
+
+.div-dialog-form fieldset { padding:0; border:0; margin-top:25px; }
+
+.div-dialog-form h1 { font-size: 1.2em; margin: .6em 0; }
+
+.div-dialog-form .ui-dialog .ui-state-error { padding: .3em; }
+
+.div-dialog-form .validateTips { border: 1px solid transparent; padding: 0.3em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

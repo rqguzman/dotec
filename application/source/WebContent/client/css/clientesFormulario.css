@@ -1,0 +1,23 @@
+
+
+#divTipoDeLogradouroList,#divUfList{
+	display:none;
+}
+
+.liTipoDeEndereco{
+	clear: both;
+}
+
+.liTipoDeEndereco *{
+	display:block;
+	float: left;
+}
+
+.btnRemoveEndereco{
+	clear: both;
+}
+
+#btnIncluiEndereco{
+	float: none;
+}
+

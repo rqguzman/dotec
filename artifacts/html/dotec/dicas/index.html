@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br"> 
+	<head> 
+		<title>DOTEC  -  Soluções em gestão da informação, arquivamento, organização, segurança, sigilo e administração de arquivos</title> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<meta name="ROBOTS" content="ALL" /> 
+		<meta name="desciption" content="" lang="pt-br" /> 
+		<meta name="keywords" content="" lang="pt-br" /> 
+		<meta name="Copyright" content="" /> 
+		<meta content="Global" name="distribution"/> 
+		<meta content="7 days" name="Revisit"/> 
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/> 		
+		<link rel="stylesheet"    type="text/css"     href="../client/css/general.css" media="screen" /> 
+		<link rel="stylesheet"    type="text/css"     href="../client/css/jquery-ui-1.8.7.custom.css"/>
+		<script type="text/javascript" src="../client/js/jquery.js"></script>
+		<script type="text/javascript" src="../client/js/cmxforms.js"></script>
+		<script type="text/javascript" src="../client/js/jquery.loading.js"></script>    
+		<script type="text/javascript" src="../client/js/jquery.maskedinput.js"></script>    
+		<script type="text/javascript" src="../client/js/jquery.validate.js"></script>  
+		<script type="text/javascript" src="../client/js/jquery.tablesorter.js"></script>  
+		<script type="text/javascript" src="../client/js/jquery.tablesorter.pager.js"></script>
+		<script type="text/javascript" src="../client/js/jquery.fixedposition.js"></script>
+		<script type="text/javascript" src="../client/js/jquery-ui-1.8.custom.min.js"></script>
+		<script type="text/javascript" src="../client/js/jquery.jstree.js" ></script>
+		<script type="text/javascript" src="../client/js/jquery.hotkeys.js" ></script>
+		<script type="text/javascript" src="../client/js/swfobject.js"></script> 		
+		<script type="text/javascript" src="../client/js/dotec.js"></script> 	
+
+		<script type="text/javascript">
+			swfobject.embedSWF("../client/swf/animacao_dotec.swf", "webdoor", "727", "189", "9.0.0", "../client/swf/animacao_dotec.swf");
+		</script>		
+	</head> 
+	<body> 
+		<div id="main">
+			<!--TOPO-->        
+			<div id="loadingPanel">
+				<span>Carregando</span><br /><br /><br />
+				<span class="txtStatus">Suas informações estão sendo processadas</span>		
+			</div>
+
+			<div id="top">
+				<!-- START MENU -->
+				<div id="menu">
+					<ul>
+						<li class="mHome"><a href="../?"><strong>Home</strong></a></li>    
+						<li class="mQuemSomos"><a href="?"><strong>Quem Somos</strong></a></li>
+						<li class="mTabela"><a href="../tabela-de-precos/"><strong>Tabela de preços</strong></a></li>
+						<li class="mArea"><a href="../area-de-atuacao/"><strong>Área de atuação</strong></a></li>
+						<li class="mDicas"><a href="../dicas/"><strong>Dicas</strong></a></li> 						
+						<li class="mContato"><a href="../contato/"><strong>Contato</strong></a></li> 
+					</ul>	
+				</div>
+				<!-- END MENU -->
+				
+				<!-- START LOGO -->
+				<div id="logo">         
+					<h1><a href="#"><strong>DOTEC - Segurança da Informação</strong></a></h1>                       
+					<!-- START BOX USUARIO -->
+					<div class="boxUsuario">                                    						
+						<form method="post" action="?" onsubmit="return validarUsuario();" name="frmLogin">
+							<!-- START LOGIN -->
+							<div class="login">
+								<div class="lineField">
+									<div>
+										<label>E-mail:</label>
+										<input type="text" id="txtLoginEmail" name="txtLoginEmail" />
+									</div>
+									<div>
+										<label>Senha:</label>
+										<input type="password" id="txtLoginPass" name="txtLoginPass" />
+									</div>
+								</div>
+								<!-- END LOGIN -->
+
+								<div class="clear"></div>
+								<!-- START LINEFIELD -->
+								<div class="lineField">
+									<a href="cadastro.asp" class="lnkCad">Crie sua conta</a>
+									<a href="javascript:void();" id="forgot-login">Esqueceu a senha?</a>
+									<input type="image" src="../client/image/btAcessar.png"  style="float:right;background:none;border:0px;" />
+								</div>
+								<!-- END LINEFIELD -->
+							</div>
+						</form>
+					
+						<!-- START FORGOT LOGIN -->
+						<div class="esqueceu" style="display:none">
+							<div class="lineField">
+								<div>
+									<label>E-mail:</label>
+									<input type="text" id="txtEsqueceuSenhaEmail" name="txtEsqueceuSenhaEmail" style="width:270px;" />
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div class="lineField">
+								<a href="javascript:void();" id="back-login"><< Voltar</a>
+								<img src="../client/image/btEnviar.png" onclick="getNewPass();" />
+							</div>
+						</div>
+						<!-- END FORGOT LOGIN -->                                         
+					</div>
+					<!-- END BOX USUARIO -->                                         
+				</div>
+      
+				<div id="webdoor">         
+					<a href="../image/animacao_dotec.swf"></a>
+				</div>
+			</div>
+			<!-- END TOP -->
+
+			<div class="clear"></div>
+    
+			<div id="msgSystem" class="sucess"></div>
+
+			<!-- START CONTENT -->
+			<div id="content">
+				<!-- START MASTER PANEL -->
+				<div id="masterPanel">
+					<!-- START LEFT MASTER -->
+					<div class="leftMaster">					             
+						<div id="boxLateral" class="boxServicos">
+							<div class="bTop"></div>    
+							<div class="bCont">
+								<div class="bDeg">
+									<h2>Serviços</h2>
+									<ul>
+										<li><a href="guarda-simples.asp">Guarda Simples</a></li>
+										<li><a href="guarda-gerenciada.asp">Guarda Gerenciada</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="bBottom"></div> 
+						</div>                            
+					</div>
+					<!-- END LEFT MASTER -->
+					<!-- START RIGHT MASTER -->
+					<div class="rightMaster">
+																						
+						<!-- START CONTEUDO PRINCIPAL -->
+						<div class="conteudo">
+							 <h2>Dicas</h2>                                  
+							<div class="topBoxConteudo"></div>
+							<div class="BoxConteudo">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id lorem et quam fringilla suscipit id non erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vestibulum, tellus ac venenatis posuere, tellus enim gravida quam, sed ullamcorper elit arcu sed ipsum. Fusce nunc mauris, posuere sit amet mattis sit amet, tincidunt vitae erat. Etiam blandit tellus id arcu facilisis porttitor. Vestibulum semper ornare nunc ac consequat. Proin leo metus, bibendum ut tristique nec, ullamcorper vel purus. Morbi nec nunc at tortor volutpat dapibus. Nullam et magna nec orci faucibus tempus. Nullam iaculis nisl turpis. Maecenas elementum dolor sed orci aliquet congue. Nullam a elit mauris. Quisque sit amet lorem nibh, eget venenatis nisi. Praesent semper fringilla congue. Etiam id quam eu nunc molestie dapibus vel eleifend eros. Aliquam ut adipiscing nisl. Curabitur vel velit vitae ante egestas ultrices a id velit. Proin eget nunc et leo rutrum vestibulum. Aenean lectus eros, suscipit eu eleifend ut, eleifend et mi.</p>
+								<p>Curabitur mattis diam et arcu interdum cursus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel velit ut odio consequat porta vitae at sem. Morbi fringilla, elit feugiat congue commodo, lorem leo suscipit mi, ut condimentum libero ligula non turpis. Nullam fermentum lacinia metus sed tempus. Nam sit amet ante nisi, ut volutpat odio. Praesent auctor ligula sed mi feugiat eget lacinia nunc interdum. Vestibulum placerat sagittis eros, ut tempor mi tincidunt tincidunt. Quisque quis nisi urna. Fusce convallis, magna non condimentum lacinia, erat dolor ullamcorper eros, a imperdiet metus neque vitae mauris. Ut auctor commodo consectetur. Suspendisse potenti. Ut id lorem in odio molestie pulvinar.</p>
+								<p>Phasellus libero velit, dignissim nec posuere a, placerat quis lorem. Quisque quam turpis, sollicitudin vitae laoreet id, vulputate et justo. Maecenas ut mi tellus. Sed viverra sagittis molestie. Cras purus nisl, consectetur a tincidunt sit amet, semper sit amet ligula. Praesent feugiat facilisis felis eu blandit. Nullam vulputate, felis ut luctus lobortis, dui tellus consectetur dolor, sed porta nisi ligula a lorem. Mauris nec aliquam sapien. Integer consequat ante et erat tincidunt lobortis ut sit amet libero. Suspendisse vestibulum placerat justo, eu posuere leo suscipit a. Sed tristique tincidunt tempor. Aliquam id posuere enim. Donec pharetra est non leo pellentesque facilisis non a erat. Aenean tempus rhoncus nunc sed consequat. In luctus consequat leo, sed vestibulum dolor varius vitae. Ut faucibus porttitor aliquet. Phasellus ante felis, pulvinar id mattis rhoncus, faucibus vel mauris.</p>
+								<p>Nam sapien massa, placerat a rhoncus eu, tempus at nunc. Suspendisse accumsan adipiscing blandit. Fusce in neque dolor, quis ultrices dolor. Sed blandit, nibh vel convallis porta, neque urna ornare augue, a tempor erat tellus quis quam. Nulla ullamcorper tristique sem, a fringilla diam dapibus sit amet. Suspendisse placerat aliquet turpis, at varius turpis accumsan eget. Mauris commodo malesuada ante. Donec vel sem neque. Nam tincidunt velit a tortor tempus in vestibulum justo molestie. Nullam eget augue urna, sed tempor massa. Praesent nec neque quam, id placerat enim. Integer nec orci nunc, eu tristique lorem. In nec libero ipsum, id venenatis orci. Morbi suscipit risus non justo vestibulum scelerisque vel nec orci. In ipsum ligula, porttitor nec scelerisque vel, auctor ut lectus. Ut convallis, sapien eget porttitor iaculis, nulla nisl rhoncus justo, id dignissim dolor nibh et metus. Proin cursus lacus id lorem convallis eu aliquam dolor malesuada.</p>
+								<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque convallis fermentum gravida. Duis sagittis, velit non dictum condimentum, enim ante ullamcorper velit, sit amet rutrum magna ligula quis metus. Vivamus ut blandit enim. Donec hendrerit ante vitae nibh cursus in euismod nibh posuere. Vestibulum dictum pharetra diam, ac feugiat sem mollis posuere. Ut blandit tristique dui ac molestie. Mauris semper augue id velit condimentum sed egestas orci ornare. Proin purus ipsum, hendrerit sit amet posuere vitae, blandit et nibh. Suspendisse eget sollicitudin ligula. Morbi id bibendum est. Curabitur convallis, sem sit amet adipiscing ornare, mauris risus imperdiet quam, quis porta erat massa sed ipsum.</p>
+								<div class="clear"></div>
+							</div>
+							
+						</div>
+						<!-- END CONTEUDO PRINCIPAL -->														
+					</div>
+					<!-- END RIGHT MASTER -->
+					<div class="clear"></div>
+				</div>   
+				<!-- end MASTER PANEL -->
+				<div class="bottomMaster"></div>
+			</div>
+			<!-- END CONTENT -->
+   
+			<!-- START FOOTER -->
+			<div id="footer">
+				<a href="#">Busca Avançada</a>     |    <a href="cadastro.asp">Criar uma conta</a>
+				<span><strong>Dotec</strong> © 2010 - Todos os direitos reservados</span>
+			</div>   
+			<!-- END FOOTER -->
+		</div>
+	</body>
+</html>
