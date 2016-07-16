@@ -283,8 +283,7 @@ public class ManagerMoip implements IManagerMoip{
 					boleto.setCliente(cliente);
 					boleto.setItens(boletoItems);
 					boletoDAO.salva(boleto);
-										
-					sendEmailCadastroBoleto(cliente, boleto, tokenClient, session);					
+								
 					return boleto;
 				}
 			}	
